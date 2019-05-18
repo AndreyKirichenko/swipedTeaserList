@@ -1,0 +1,41 @@
+$ribbon-default-color: #1345ae;
+
+.ribbon {
+  align-items: center;
+  background-color: $ribbon-default-color;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-flex;
+  height: 20px;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1em;
+  padding: 0 2px 0 9px;
+  position: relative;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &:before,
+  &:after {
+    content: '' ;
+    left: 100%;
+    position: absolute;
+
+  }
+
+  &:before {
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid $ribbon-default-color;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $ribbon-default-color;
+    top: 0;
+  }
+
+  &:after {
+    border-bottom: 5px solid $ribbon-default-color;
+    border-left: 5px solid $ribbon-default-color;
+    border-right: 5px solid transparent;
+    border-top: 5px solid transparent;
+    bottom: 0;
+  }
+}

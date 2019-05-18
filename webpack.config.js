@@ -1,7 +1,7 @@
 const merge = require('webpack-merge');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-let CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const js = require('./webpack/js');
 const css = require('./webpack/css');
@@ -47,8 +47,8 @@ const common = merge([
     ]
   },
   pug(),
-  js(),
   css(),
+  js(),
   favicon(),
   webworker()
 ]);
@@ -61,7 +61,7 @@ module.exports = function(env, argv) {
       devserver(),
       sourceMap(),
       lintJS({ paths: PATHS.source }),
-      lintCSS(),
+      // lintCSS(),
       nodeEnv(argv.mode)
     ]);
   }

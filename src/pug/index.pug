@@ -3,7 +3,62 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
-    title Minimal React Webpack build
-  body
-    #root
-    h1 TEST
+
+    title itBoat
+
+    link(href='https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,800&display=swap', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:700&display=swap', rel='stylesheet')
+
+  body.page
+    section.page__section
+      .page__container
+        .swipeable-teasers
+          h1.swipeable-teasers__title
+            | Специальные предложения
+
+          .swipeable-teasers__buttons
+            button.swipeable-teasers__button.swipeable-teasers__button--prev
+              | <
+
+            button.swipeable-teasers__button.swipeable-teasers__button--next
+              | >
+
+          .swipeable-teasers__wrapper
+            ul.swipeable-teasers__list
+              li.swipeable-teasers__item
+                .teaser
+                  a.teaser__link(href='/', target='_blank')
+
+                  .teaser__discount
+                    | –40%
+
+                  img.teaser__image(src='/img/demo-img.jpg', srcset='/img/demo-img-x2.jpg 2x')
+
+                  //.teaser__info
+                  .teaser__title
+                    | 44 м Heesen AT Last
+
+                  ul.teaser__specs
+                    li.teaser__spec-item
+                      | 2001 / REFIT 2015
+
+                    li.teaser__spec-item
+                      | 4 КАЮТЫ
+
+                  .teaser__old-price
+                    .teaser__price
+                      | 15,750,000
+
+                    .teaser__ribbon.ribbon
+                      | до 30 апр.
+
+                  .teaser__current-price
+                    .teaser__price
+                      | € 9,750,000
+
+                    .teaser__price-description
+                      | неделя
+
+                    .teaser__hint
+                      | ?
+
