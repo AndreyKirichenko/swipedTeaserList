@@ -1,0 +1,41 @@
+mixin teaser(isRibbonNeutral)
+  .teaser
+    a.teaser__link(href='/', target='_blank')
+
+    .teaser__discount
+      | –40%
+
+    img.teaser__image(src='/img/demo-img.jpg', srcset='/img/demo-img-x2.jpg 2x')
+
+    .teaser__title
+      | 44 м Heesen AT Last
+
+    ul.teaser__specs
+      li.teaser__spec-item
+        | 2001 / REFIT 2015
+
+      li.teaser__spec-item
+        | 4 КАЮТЫ
+
+    .teaser__old-price
+      .teaser__price
+        | 15,750,000
+
+      if isRibbonNeutral
+        .teaser__ribbon.ribbon.ribbon--neutral
+          | до 30 апр.
+
+      else
+        .teaser__ribbon.ribbon
+          | до 30 апр.
+
+    .teaser__current-price
+      .teaser__price
+        | € 9,750,000
+
+      .teaser__price-description
+        | неделя
+
+      .teaser__hint
+        button.round-botton
+          | ?

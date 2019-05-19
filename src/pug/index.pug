@@ -1,3 +1,5 @@
+include teaser
+
 doctype html
 html
   head
@@ -10,55 +12,58 @@ html
     link(href='https://fonts.googleapis.com/css?family=Montserrat:700&display=swap', rel='stylesheet')
 
   body.page
+    svg(style='position: absolute; width: 0; height: 0; overflow: hidden;', version='1.1', xmlns='http://www.w3.org/2000/svg')
+      defs
+        symbol#svgPrev(viewbox='0 0 9 15', fill='none')
+          path(d='M8 1L2 7.5 8 14', stroke='currentColor', stroke-width='1.5')
+
+        symbol#svgNext(viewbox='0 0 9 15', fill='none')
+          path(d='M1 1l6 6.5L1 14', stroke='currentColor', stroke-width='1.5')
+
+
     section.page__section
       .page__container
         .swipeable-teasers
-          h1.swipeable-teasers__title
-            | Специальные предложения
+          .swipeable-teasers__head
+            h1.swipeable-teasers__title
+              | Специальные предложения
 
-          .swipeable-teasers__buttons
-            button.swipeable-teasers__button.swipeable-teasers__button--prev
-              | <
+            .swipeable-teasers__buttons
+              .swipeable-teasers__prev
+                button.round-botton.round-botton--big
+                  svg.swipeable-teasers__buttonIcon
+                    use(xlink:href='#svgPrev')
 
-            button.swipeable-teasers__button.swipeable-teasers__button--next
-              | >
+              .swipeable-teasers__next
+                button.round-botton.round-botton--big
+                  svg.swipeable-teasers__buttonIcon
+                    use(xlink:href='#svgNext')
 
           .swipeable-teasers__wrapper
             ul.swipeable-teasers__list
               li.swipeable-teasers__item
-                .teaser
-                  a.teaser__link(href='/', target='_blank')
+                +teaser
 
-                  .teaser__discount
-                    | –40%
+              li.swipeable-teasers__item
+                +teaser
 
-                  img.teaser__image(src='/img/demo-img.jpg', srcset='/img/demo-img-x2.jpg 2x')
+              li.swipeable-teasers__item
+                +teaser(true)
 
-                  //.teaser__info
-                  .teaser__title
-                    | 44 м Heesen AT Last
+              li.swipeable-teasers__item
+                +teaser(true)
 
-                  ul.teaser__specs
-                    li.teaser__spec-item
-                      | 2001 / REFIT 2015
+              li.swipeable-teasers__item
+                +teaser
 
-                    li.teaser__spec-item
-                      | 4 КАЮТЫ
+              li.swipeable-teasers__item
+                +teaser
 
-                  .teaser__old-price
-                    .teaser__price
-                      | 15,750,000
+              li.swipeable-teasers__item
+                +teaser(true)
 
-                    .teaser__ribbon.ribbon
-                      | до 30 апр.
+              li.swipeable-teasers__item
+                +teaser(true)
 
-                  .teaser__current-price
-                    .teaser__price
-                      | € 9,750,000
-
-                    .teaser__price-description
-                      | неделя
-
-                    .teaser__hint
-                      | ?
-
+          .swipeable-teasers__bar
+            .swipeable-teasers__positon

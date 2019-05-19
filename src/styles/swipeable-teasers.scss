@@ -1,3 +1,45 @@
 .swipeable-teasers {
 
 }
+
+.swipeable-teasers__head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.swipeable-teasers__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform: translateX(-5px);
+  white-space: nowrap;
+}
+
+.swipeable-teasers__buttons {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(7px);
+  width: 75px;
+}
+
+.swipeable-teasers__buttonIcon {
+  height: 15px;
+  width: 9px;
+}
+
+.swipeable-teasers__wrapper {
+  display: flex;
+  overflow: hidden;
+}
+
+.swipeable-teasers__list {
+  display: flex;
+}
+
+.swipeable-teasers__item {
+  margin-right: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

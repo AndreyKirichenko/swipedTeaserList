@@ -1,4 +1,9 @@
 .teaser {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 9px;
   position: relative;
   width: 306px;
 
@@ -9,7 +14,7 @@
     left: 0;
     opacity: 0.1;
     position: absolute;
-    top: 0;
+    top: 8px;
     width: 100%;
   }
 }
@@ -29,7 +34,7 @@
   box-sizing: border-box;
   color: #fff;
   display: flex;
-  height: 46px;
+  height: 47px;
   font-family: Roboto, sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -38,25 +43,36 @@
   left: 9px;
   line-height: 18px;
   position: absolute;
-  padding-right: 5px;
+  padding-right: 2px;
   padding-top: 2px;
   text-transform: uppercase;
-  top: -8px;
+  top: 0;
   width: 46px;
+}
+
+.teaser__discount,
+.teaser__image,
+.teaser__title,
+.teaser__specs,
+.teaser__old-price,
+.teaser__current-price {
   z-index: 2;
+}
+
+.teaser__image,
+.teaser__title,
+.teaser__specs,
+.teaser__old-price,
+.teaser__current-price {
+  position: relative;
+  max-width: 100%;
 }
 
 .teaser__image {
-  height: 220px;
-  margin-bottom: 12px;
-  position: relative;
+  height: 219px;
+  margin-bottom: 15px;
   width: 100%;
   z-index: 0;
-}
-
-.teaser__info {
-  position: relative;
-  z-index: 2;
 }
 
 .teaser__title,
@@ -74,6 +90,7 @@
   line-height: 1em;
   font-weight: 700;
   margin-bottom: 10px;
+  padding-left: 1px;
 }
 
 .teaser__specs {
@@ -125,17 +142,18 @@
   align-items: center;
   display: flex;
   margin-bottom: 5px;
-  padding-left: 1px;
+  padding-left: 2px;
 
   .teaser__price {
     font-size: 13px;
     font-weight: 400;
+    padding-top: 3px;
     text-decoration-line: line-through;
   }
 }
 
 .teaser__ribbon {
-  margin-left: 10px;
+  margin-left: 11px;
 }
 
 .teaser__current-price {
@@ -157,16 +175,5 @@
 }
 
 .teaser__hint {
-  align-items: center;
-  cursor: pointer;
-  border: 1px solid #979797;
-  border-radius: 50%;
-  box-sizing: border-box;
-  color: #979797;
-  display: flex;
-  font-size: 13px;
-  height: 22px;
-  justify-content: center;
   margin-left: 10px;
-  min-width: 22px;
 }

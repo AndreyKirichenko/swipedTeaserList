@@ -1,4 +1,5 @@
 $ribbon-default-color: #1345ae;
+$ribbon-neutral-color: #454242;
 
 .ribbon {
   align-items: center;
@@ -10,7 +11,7 @@ $ribbon-default-color: #1345ae;
   font-weight: 500;
   font-size: 11px;
   line-height: 1em;
-  padding: 0 2px 0 9px;
+  padding: 0 2px 0 8px;
   position: relative;
   text-transform: uppercase;
   white-space: nowrap;
@@ -37,5 +38,20 @@ $ribbon-default-color: #1345ae;
     border-right: 5px solid transparent;
     border-top: 5px solid transparent;
     bottom: 0;
+  }
+}
+
+.ribbon--neutral {
+  background-color: $ribbon-neutral-color;
+  opacity: 0.5;
+
+  &:before {
+    border-left-color: $ribbon-neutral-color;
+    border-top-color: $ribbon-neutral-color;
+  }
+
+  &:after {
+    border-bottom-color: $ribbon-neutral-color;
+    border-left-color: $ribbon-neutral-color;
   }
 }
