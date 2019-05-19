@@ -1,3 +1,17 @@
 .button {
+  border: 1px solid rgba(19, 69, 174, 0.3);
+  border-radius: 25px;
+  color: #1345ae;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1em;
+  padding: 15px 78px;
+  text-decoration: none;
+  white-space: nowrap;
 
+  &:hover {
+    border-color: #bb9964;
+    color: #bb9964;
+  }
 }

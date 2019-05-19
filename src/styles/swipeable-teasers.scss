@@ -1,7 +1,3 @@
-.swipeable-teasers {
-
-}
-
 .swipeable-teasers__head {
   display: flex;
   justify-content: space-between;
@@ -41,5 +37,69 @@
 
   &:last-child {
     margin-right: 0;
+  }
+}
+
+.swipeable-teasers__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 37px;
+}
+
+.swipeable-teasers__bar,
+.swipeable-teasers__positon {
+  border-radius: 2px;
+}
+
+.swipeable-teasers__bar {
+  background-color: rgba(57, 56, 56, 0.1);
+  display: none;
+  height: 4px;
+  margin-top: 17px;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.swipeable-teasers__positon {
+  background-color: #1345ae;
+  height: 2px;
+  margin-top: 1px;
+  min-width: 56px;
+  position: relative;
+  width: 56px;
+}
+
+.swipeable-teasers__showAll {
+  display: inline-flex;
+
+  @media (min-width: $tablet) {
+    margin-left: 27px;
+  }
+}
+
+.swipeable-teasers__showAllIcon {
+  display: flex;
+  margin-left: 2px;
+  margin-right: 11px;
+  margin-top: 5px;
+}
+
+.swipeable-teasers__showAllIconPart {
+  background-color: #1345ae;
+  border-radius: 2px;
+  display: block;
+  height: 4px;
+  margin-right: 3px;
+  width: 4px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .swipeable-teasers__showAll:hover & {
+    background-color: #bb9964;
   }
 }
